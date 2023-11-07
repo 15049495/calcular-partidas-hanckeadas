@@ -1,0 +1,27 @@
+// Declarando função
+function calcularORank(vitorias, derrotas) {
+    // variáveis
+    let saldoDeRankeds = vitorias - derrotas;
+    let nivel;
+
+    // Condicionais
+    if (saldoDeRankeds < 10) {
+        nivel = 'Ferro 🦾';
+    } else if (saldoDeRankeds >= 10 && saldoDeRankeds <= 20) {
+        nivel = 'Bronze 🥉';
+    } else if (saldoDeRankeds >= 21 && saldoDeRankeds <= 50) {
+        nivel = 'Prata 🥈';
+    } else if (saldoDeRankeds >= 51 && saldoDeRankeds <= 80) {
+        nivel = 'Ouro 🥇';
+    } else if (saldoDeRankeds >= 81 && saldoDeRankeds <= 90) {
+        nivel = 'Diamante 💎';
+    } else if (saldoDeRankeds >= 91 && saldoDeRankeds <= 100) {
+        nivel = 'Lendário 💪';
+    } else {
+        nivel = 'Imortal ☠️'
+    }
+
+    return "O Herói tem " + saldoDeRankeds + " pontos de saldo e está no nível de " + nivel;
+}
+
+console.log(calcularORank(120, 40));
